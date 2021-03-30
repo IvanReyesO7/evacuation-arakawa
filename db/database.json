@@ -1,1 +1,51 @@
-database.json
+[
+  {
+    "name": "荒川自然公園一帯 ",
+    "name_romaji": "Arakawa shizen kouen",
+    "alt_name": "Arakawa Natural Park",
+    "lon": 139.786809689086,
+    "lat": 35.741704526213
+  },
+  {
+    "name": "都立尾久の原公園一帯",
+    "name_romaji": "Toritsu ogunohara kouen",
+    "alt_name": "Ogunohara Park",
+    "lon": 139.776234981513,
+    "lat": 35.751442215966
+  },
+  {
+    "name": "JR田端・尾久駅周辺一帯",
+    "name_romaji": "JR tabata oguekishuuhen",
+    "alt_name": "JR Tabata and Ogu St. railway",
+    "lon": 139.756918614587,
+    "lat": 35.7439287011324
+  },
+  {
+    "name": "谷中墓地",
+    "name_romaji": "Yanaka hakachi",
+    "alt_name": "Yanaka Cemetery",
+    "lon": 139.771571942854,
+    "lat": 35.7246281529379
+  },
+  {
+    "name": "上野公園一帯",
+    "name_romaji": "Ueno kouen",
+    "alt_name": "Ueno Park",
+    "lon": 139.774090602988,
+    "lat": 35.7154861346275
+  },
+  {
+    "name": "都立汐入公園一帯",
+    "name_romaji": "Toritsu shioiri kouen",
+    "alt_name": "Shiori Park",
+    "lon": 139.809679905439,
+    "lat": 35.7367136132875
+  },
+  {
+    "name": "荒川工業高校一帯",
+    "name_romaji": "Arakawa kougyoukouko",
+    "alt_name": "Arakawa Technical School",
+    "lon": 139.7921883,
+    "lat": 35.7376896658873
+  }
+]

@@ -1,8 +1,8 @@
-name	name_romaji	alt_name	lon	lat
-________	Arakawa shizen kouen	Arakawa Natural Park		
-__________	Toritsu ogunohara kouen	Ogunohara Park		
-JR__________	JR tabata oguekishuuhen	JR Tabata and Ogu St. railway		
-____	Yanaka hakachi	Yanaka Cemetery		
-______	Ueno kouen	Ueno Park		
-________	Toritsu shiori kouen	Shiori Park		
-________	Arakawa kougyoukouko	Arakawa Technical School		
+name,name_romaji,alt_name,lon,lat
+________,Arakawa shizen kouen,Arakawa Natural Park,139.7868097,35.74170453
+__________,Toritsu ogunohara kouen,Ogunohara Park,139.776235,35.75144222
+JR__________,JR tabata oguekishuuhen,JR Tabata and Ogu St. railway,139.7569186,35.7439287
+____,Yanaka hakachi,Yanaka Cemetery,139.7715719,35.72462815
+______,Ueno kouen,Ueno Park,139.7740906,35.71548613
+________,Toritsu shiori kouen,Shiori Park,139.8096799,35.73671361
+________,Arakawa kougyoukouko,Arakawa Technical School,,
