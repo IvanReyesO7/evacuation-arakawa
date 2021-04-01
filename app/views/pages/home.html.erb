@@ -2,4 +2,8 @@
      style="width: 100vw; height: 100vh;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  <a href="#" class="btn btn-primary">Click to local</a>
 </div>
+<a href="#" id="nearest-btn" class="btn btn-primary">Nearest location</a>
+<span hidden class="lon"></span>
+<span hidden class="lat"></span>
