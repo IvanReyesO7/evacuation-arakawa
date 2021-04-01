@@ -6,7 +6,6 @@ class PagesController < ApplicationController
         lat: location.lat,
         lng: location.lon
       }
-    end
-    raise
+    ends
   end
 end
