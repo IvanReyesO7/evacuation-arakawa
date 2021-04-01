@@ -4,7 +4,9 @@ class PagesController < ApplicationController
     @markers = @locations.geocoded.map do |location|
       {
         lat: location.lat,
-        lng: location.lon
+        lng: location.lon,
+        image_url: helpers.asset_url('evacuation.jpeg'),
+        id: location.id
       }
     end
   end
