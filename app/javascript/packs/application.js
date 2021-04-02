@@ -33,6 +33,7 @@ import { userLocation } from '../plugins/user_location';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  initMapbox();
   userLocation();
+  initMapbox();
+
 });

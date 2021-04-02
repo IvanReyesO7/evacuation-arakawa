@@ -13,6 +13,7 @@ const initMapbox = () => {
 
   if (mapElement) {
     mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
+
     const map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v10'
@@ -30,14 +31,6 @@ const initMapbox = () => {
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
     });
-    map.addControl(
-      new mapboxgl.GeolocateControl({
-        positionOptions: {
-          enableHighAccuracy: true
-        },
-        trackUserLocation: true
-      })
-    );
     fitMapToMarkers(map, markers);
   }
 };

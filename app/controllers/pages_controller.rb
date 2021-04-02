@@ -9,7 +9,6 @@ class PagesController < ApplicationController
         id: location.id
       }
     end
-    @nearest = Location.near([params[:lat], params[:lon]], 3).first
-    raise
+    @nearest = Location.near([params[:lat], params[:lon]], 3)
   end
 end
