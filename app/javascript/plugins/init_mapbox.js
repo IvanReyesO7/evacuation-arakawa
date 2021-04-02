@@ -40,27 +40,39 @@ const initMapbox = () => {
         // only the end or destination will change
         var start = [139.78771710281782, 35.728317674676845];
         var end = [139.79233149891627,35.73811589177208]
-        var url = 'https://api.mapbox.com/directions/v5/mapbox/walking/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
-
-        // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-        var req = new XMLHttpRequest();
-        req.open('GET', url, true);
-        req.onload = function() {
-          var json = JSON.parse(req.response);
-          var data = json.routes[0];
-          var route = data.geometry.coordinates;
-          var geojson = {
-            type: 'Feature',
-            properties: {},
-            geometry: {
-              type: 'LineString',
-              coordinates: route
+        var route = {
+          'type': 'FeatureCollection',
+          'features': [
+            {
+            'type': 'Feature',
+            'geometry': {
+              'type': 'LineString',
+              'coordinates': [start, end]
+             }
             }
-          };
-          console.log(geojson);
+          ]
         };
-      req.send();
-    }
+
+        map.on('load', function () {
+        // Add a source and layer displaying a point which will be animated in a circle.
+        map.addSource('route', {
+        'type': 'geojson',
+        'data': route
+        });
+
+
+        map.addLayer({
+          'id': 'route',
+          'source': 'route',
+          'type': 'line',
+          'paint': {
+          'line-width': 2,
+          'line-color': '#007cbf'
+          }
+        });
+
+      });
+    };
     var canvas = map.getCanvasContainer();
     routes();
     fitMapToMarkers(map, markers);
