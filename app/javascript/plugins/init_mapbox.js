@@ -34,21 +34,35 @@ const initMapbox = () => {
         .setLngLat([ marker.lng, marker.lat ])
         .addTo(map);
     });
+
     const routes = () => {
         // make a directions request using cycling profile
         // an arbitrary start will always be the same
         // only the end or destination will change
         var start = [139.78771710281782, 35.728317674676845];
         var end = [139.79233149891627,35.73811589177208]
-        var route = {
+
+
+          var url = 'https://api.mapbox.com/directions/v5/mapbox/walking/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
+
+          // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+          var req = new XMLHttpRequest();
+          req.open('GET', url, true);
+          req.onload = function() {
+            var json = JSON.parse(req.response);
+            var data = json.routes[0];
+            var ruta = data.geometry.coordinates;
+            console.log(ruta);
+
+            var route = {
           'type': 'FeatureCollection',
           'features': [
             {
-            'type': 'Feature',
-            'geometry': {
-              'type': 'LineString',
-              'coordinates': [start, end]
-             }
+              'type': 'Feature',
+              'geometry': {
+               'type': 'LineString',
+                'coordinates': ruta
+               }
             }
           ]
         };
@@ -72,6 +86,12 @@ const initMapbox = () => {
         });
 
       });
+
+          };
+          req.send();
+
+
+
     };
     var canvas = map.getCanvasContainer();
     routes();
