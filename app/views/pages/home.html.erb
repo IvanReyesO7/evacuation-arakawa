@@ -1,4 +1,5 @@
 <div id="map"
+     class = "home-map"
      style="width: 100vw; height: 100vh;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -6,5 +7,3 @@
 <a href="#" id="nearest-btn" class="btn btn-primary">Nearest location</a>
 <span hidden class="userlon"></span>
 <span hidden class="userlat"></span>
-<span hidden class="destinlon"><%=@nearest.first.lon%></span>
-<span hidden class="destinlat"><%=@nearest.first.lat%></span>
