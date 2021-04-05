@@ -1,12 +1,20 @@
 
 .content{
   position: absolute;
-  top: 1vh;
-  left: 1vw;
+  top: 0vh;
 }
 
 .home-info{
-  background-color: #ffffffb8;
+  background-color: #000000a6;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
+  padding: 3em;
+  color: white;
+  font-size: 1.2em;
+}
+
+.title{
+  padding-top: 2em;
+  padding-bottom: 1em;
+  font-size: 2em;
 }
