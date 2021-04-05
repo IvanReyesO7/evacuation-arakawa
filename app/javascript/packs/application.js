@@ -34,6 +34,6 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   userLocation();
-  initMapbox();
+  setTimeout(initMapbox,3000);
 
 });

@@ -32,7 +32,8 @@ const initMapbox = () => {
         .addTo(map);
     });
 
-      var start = [139.78771710281782, 35.728317674676845];
+      var start = [parseFloat(document.querySelector(".userlon").innerText), parseFloat(document.querySelector(".userlat").innerText)];
+      console.log(document.querySelector(".userlon").innerText);
       var end = [139.79233149891627,35.73811589177208]
       var url = 'https://api.mapbox.com/directions/v5/mapbox/walking/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?steps=true&geometries=geojson&access_token=' + mapboxgl.accessToken;
       // make an XHR request https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
