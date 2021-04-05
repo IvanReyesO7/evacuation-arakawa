@@ -4,5 +4,7 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 <a href="#" id="nearest-btn" class="btn btn-primary">Nearest location</a>
-<span hidden class="lon"></span>
-<span hidden class="lat"></span>
+<span hidden class="userlon"></span>
+<span hidden class="userlat"></span>
+<span hidden class="destinlon"><%=@nearest.first.lon%></span>
+<span hidden class="destinlat"><%=@nearest.first.lat%></span>
