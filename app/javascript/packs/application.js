@@ -27,13 +27,21 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { initMapbox } from '../plugins/init_mapbox';
 import { userLocation } from '../plugins/user_location';
+import { locationMapbox } from '../plugins/location_mapbox';
+import { initMapbox } from '../plugins/init_mapbox';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  const location = document.querySelector(".location-map");
+  const home = document.querySelector(".home-map");
   userLocation();
-  setTimeout(initMapbox,3000);
+  if (home) {
+    initMapbox();
+  }
+  if (location) {
+    setTimeout(locationMapbox,3000);
+  }
 
 });
