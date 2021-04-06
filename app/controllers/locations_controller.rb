@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
       {
         lat: location.lat,
         lng: location.lon,
-        image_url: helpers.asset_url('evacuation.jpeg'),
+        image_url: helpers.asset_url('evacuation.png'),
         id: location.id
       }
     end
