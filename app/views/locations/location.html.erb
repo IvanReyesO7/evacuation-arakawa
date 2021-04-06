@@ -4,13 +4,14 @@
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+<a href="/" class="back"><i class="fas fa-chevron-left"></i></a>
 <div class="info-card">
   <p><b>Closest evacuation location:</b></p>
   <p><%=@nearest.first.name%></p>
   <p><%=@nearest.first.name_kana%></p>
   <p><%=@nearest.first.name_romaji%></p>
   <p><%=@nearest.first.alt_name%></p>
-  <a class="btn btn-primary"href="">Check it on Maps</a>
+  <a class="btn btn-primary"href="https://www.google.com/maps/place/<%=@nearest.first.lat%>,<%=@nearest.first.lon%>">Check it on Maps</a>
 </div>
 <span hidden class="userlon"></span>
 <span hidden class="userlat"></span>
