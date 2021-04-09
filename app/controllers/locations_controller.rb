@@ -10,6 +10,5 @@ class LocationsController < ApplicationController
       }
     end
     @nearest = Location.near([params[:lat], params[:lon]], 3)
-    @random = []
   end
 end
