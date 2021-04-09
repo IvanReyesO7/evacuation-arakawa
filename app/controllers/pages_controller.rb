@@ -9,7 +9,6 @@ class PagesController < ApplicationController
         id: location.id
       }
     end
-    @nearest = Location.near([params[:lat], params[:lon]], 3)
     @random = [rand(139.757589..139.810117), rand(35.726423..35.753036)]
   end
 end
