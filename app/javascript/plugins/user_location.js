@@ -7,8 +7,8 @@ const userLocation = (callback) => {
       if (document.querySelector("#nearest-btn")){
         document.querySelector("#nearest-btn").href = `/location?lon=${lon}&lat=${lat}`;
       }
-      document.querySelector(".userlon").innerText = lon;
-      document.querySelector(".userlat").innerText = lat;
+      // document.querySelector(".userlon").innerText = lon;
+      // document.querySelector(".userlat").innerText = lat;
     });
   }
 }

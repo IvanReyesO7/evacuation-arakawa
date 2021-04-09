@@ -13,7 +13,7 @@
   <p><%=@nearest.first.alt_name%></p>
   <a class="btn btn-primary"href="https://www.google.com/maps/place/<%=@nearest.first.lat%>,<%=@nearest.first.lon%>">Check it on Maps</a>
 </div>
-<span hidden class="userlon"></span>
-<span hidden class="userlat"></span>
+<span hidden class="userlon"><%=params[:lon]%></span>
+<span hidden class="userlat"><%=params[:lat]%></span>
 <span hidden class="destinlon"><%=@nearest.first.lon%></span>
 <span hidden class="destinlat"><%=@nearest.first.lat%></span>
